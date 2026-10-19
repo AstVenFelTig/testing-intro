@@ -35,9 +35,14 @@ function changeQuantity() {
 function removeFromCart(cart, id) {
   return cart.filter((item) => item.id !== id);
 }
-function calculateCartSubtotal() {
-  return notImplemented();
+function calculateCartSubtotal(cart) {
+  if (cart.length === 0) {
+    return 0;
+  } else {
+    return cart.reduce((acc, elem) => acc + elem.price * elem.quantity, 0);
+  }
 }
+
 function calculateOrderTotal() {
   return notImplemented();
 }
