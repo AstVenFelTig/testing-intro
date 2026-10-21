@@ -2,8 +2,6 @@ const products = require("../../src/data/products");
 const { getProductById } = require("../../src/catalog");
 
 describe("getProductById", () => {
-  test.todo("ID 1 возвращает products[0]");
-
   test("ID 1 возвращает products[0]", () => {
     expect(getProductById(products, 1)).toEqual(products[0]);
   });
